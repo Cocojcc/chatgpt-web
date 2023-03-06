@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 import { defineAsyncComponent, ref } from 'vue'
-import { HoverButton, SvgIcon, UserAvatar } from '@/components/common'
 
 const Setting = defineAsyncComponent(() => import('@/components/common/Setting/index.vue'))
 
@@ -9,14 +8,15 @@ const show = ref(false)
 
 <template>
   <footer class="flex items-center justify-between min-w-0 p-4 overflow-hidden border-t dark:border-neutral-800">
-    <UserAvatar />
-
-    <HoverButton :tooltip="$t('setting.setting')" @click="show = true">
-      <span class="text-xl text-[#4f555e] dark:text-white">
-        <SvgIcon icon="ri:settings-4-line" />
-      </span>
-    </HoverButton>
-
-    <Setting v-if="show" v-model:visible="show" />
+    <p>
+      Powered by
+      <a
+        class="text-blue-600 dark:text-blue-500"
+        href="https://github.com/Chanzhaoyu/chatgpt-web"
+        target="_blank"
+      >
+        chatgpt-web
+      </a>
+    </p>
   </footer>
 </template>

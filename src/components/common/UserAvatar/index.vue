@@ -21,13 +21,10 @@ const userInfo = computed(() => userStore.userInfo)
           :fallback-src="defaultAvatar"
         />
       </template>
-      <template v-else>
-        <NAvatar size="large" round :src="defaultAvatar" />
-      </template>
     </div>
     <div class="ml-2">
       <h2 class="font-bold text-md">
-        {{ userInfo.name ?? 'ChenZhaoYu' }}
+        {{ userInfo.name }}
       </h2>
       <p class="text-xs text-gray-500">
         <span
